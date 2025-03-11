@@ -1,0 +1,6 @@
+import pandas as pd # pd = apelido 
+
+#### A BEMDITA TABELA/ARQUIVO EXCEL/XLSX OU QUALQUER OUTRO QUE SEJA UMA BENDITA TABELA TEM QUE ESTA DENDRO DA PASTA QUE O PROGRAMA ESTA USANDO NO TERMINAL#### COMO SABER DISSO: IMPORTA O QUERIDO os E MANDA PRINTAR: print("diretorio atual de trabalho:,os.getcwd()) E VERIFICA SE O CARALHO DA PASTA É A MESMA EM QUE TA A BENDITA TABELA. ###### E NÃO ESQUECE O CARALHO DA AUTORIZAÇÃO NAS PROPRIEDADE DA BENDITA TABELA #########
+
+df = pd.read_excel('tabela.xlsx') #df = data frame
+print(df) # imprime tudo
