@@ -1,0 +1,35 @@
+header {
+    background-color: cadetblue;
+}
+
+h1 {
+    background-color: blue;
+    text-align: center;
+}
+nav {
+    background-color: brown;
+    padding: 20px;
+    display: flex; /* fazer que o navegador fique espaçado certinho*/
+
+    /*alinhar elementos dentro do display flex*/
+    justify-content: space-between; /*distribui o espaço disponível igualmente entre os itens acima(flex),*/
+    align-items: center; /*alinhas itens*/
+}
+main {
+    background-color: gray;
+}
+p {
+    background-color: yellow;
+    margin-bottom: 30px;
+}
+footer {
+    text-align: center;
+}
+.paragrafo {
+    background-color: red;
+}
+.tamanho {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 4</title>
+    <script src="index.js"></script>
+    <style>
+      body{
+        font-size: 20px;
+      }
+    </style>
+</head>
+<body>
+    <h1>1. Requisições Assíncronas com FetchAPI</h1>
+    <h2>Oque é FetchAPI?</h2>
+    <p>A Fetch API é uma interface nativa do JavaScript para fazer requisições HTTP de forma assíncrona, ou seja, sem bloquear a execução do código. Ela é usada para buscar dados de uma URL, seja em uma API ou servidor, permitindo comunicação entre o navegador e o servidor sem a necessidade de recarregar a página.</p>
+    <p>Com a Fetch API, podemos fazer requisições de diversos tipos como GET, POST, PUT, DELETE, etc., e manipular os dados de resposta, que geralmente vêm no formato JSON.</p>
+    <br>
+    <h2>Estrutura Básica de uma Requisição com Fetch</h2>
+    <p>A função <b>fetch()</b> recebe dois parâmetros: <br> <br>
+
+        <b>URL (obrigatório):</b> O endereço do recurso ou API. <br> <br>
+        <b>Configurações Opcionais:</b> Um objeto de opções, onde definimos o tipo de requisição (method), cabeçalhos (headers), corpo da requisição (body), entre outros
+    </p>
+    <p style="color: red">
+        fetch('https://api.publicapis.org/entries')     // URL do recurso <br>
+        .then(response => response.json())  // converte a resposta em JSON <br>
+        .then(data => console.log(data))    // manipula os dados recebidos <br>
+        .catch(error => console.error('Erro:', error));     // trata erros
+
+    </p>
+    <br>
+    <h2>Exemplo de Requisição POST com Fetchs</h2>
+    <p>Aqui está um exemplo de requisição POST, onde enviamos dados para um servidor:</p>
+        <p style="color: red">fetch('https://jsonplaceholder.typicode.com/posts', { <br>
+            --method: 'POST', <br>
+            --headers: { <br>
+          ----'Content-Type': 'application/json' <br>
+        --}, <br>
+        --body: JSON.stringify({ <br>
+          ----title: 'Novo Post', <br>
+          ----body: 'Este é o conteúdo do post.', <br>
+          ----userId: 1 <br>
+        --}) <br>
+      }) <br>
+        --.then(response => response.json()) // converte a resposta para JSON <br>
+        --.then(data => console.log(data))   // exibe os dados recebidos <br>
+        --.catch(error => console.error('Erro:', error)); // trata erros
+      </p>
+      <br>
+      <h2>1.1 Requisições Assíncronas com FetchAPI</h2>
+      <p>
+        A Fetch API permite fazer requisições HTTP de forma assíncrona, como GET, POST, PUT, DELETE etc. A função fetch() retorna uma Promise, que pode ser manipulada com .then(), .catch() e .finally().
+      </p>
+      <p>
+        <b>Exemplo de Requisição GET:</b>
+      </p>
+    <p style="color: red;">
+        fetch('https://api.publicapis.org/entries') <br>
+            --.then(response => { <br>
+                ----if (!response.ok) { <br>
+                    ------<b>throw</b> new Error('Erro na requisição'); <br>
+                ----} <br>
+                ----return response.json(); // converte para JSON <br>
+            --}) <br>
+            --.then(data => console.log(data)) // exibe os dados no console <br>
+            --.catch(error => console.error('Erro:', error));
+    </p>
+    <p>
+      <b>Throw:</b> é uma instrução do JavaScript usada para "lançar" um erro explicitamente, ou seja, interromper a execução normal de uma função e indicar que algo deu errado. Ao lançar um erro, você informa ao JavaScript que houve um problema que precisa ser tratado, geralmente em um bloco catch.
+    </p>
+    <br>
+    <p>
+      <b>Requisição POST:</b>
+    </p>
+    <p style="color: red;">
+      fetch('https://jsonplaceholder.typicode.com/posts', { <br>
+        --method: 'POST', <br>
+        --headers: { <br>
+          ----'Content-Type': 'application/json' <br>
+        --}, <br>
+        --body: JSON.stringify({ <br>
+          ----title: 'Título', <br>
+          ----body: 'Conteúdo do post', <br>
+          ----userId: 1 <br>
+        --}) <br>
+      }) <br>
+        --.then(response => response.json()) <br>
+        --.then(data => console.log(data)) <br>
+        --.catch(error => console.error('Erro:', error));      
+    </p>
+</body>
+</html>

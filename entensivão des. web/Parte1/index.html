@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <style>
+        body{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Intensivão / Parte 1</h1>
+    <br>
+    <h2>Tipos primitivos:</h2>
+    <p>let nome = "João"; // String <br>
+        let idade = 25; // Number <br>
+        let ativo = true; // Boolean <br>
+        let indefinido; // Undefined <br>
+        let vazio = null; // Null
+    </p>
+    <br>
+    <h2>Arrays/Listas:</h2>
+    <p>let frutas = ["Maçã", "Banana", "Laranja"]; <br>
+    console.log(frutas[0]); // "Maçã"
+    </p>
+    
+    <br>
+    <h2>Objetos:</h2>
+    <p>let pessoa = { <br>
+        nome: "Maria", <br>
+        idade: 30, <br>
+        cidade: "São Paulo" <br>
+      }; <br>
+      
+      console.log(pessoa.nome); // "Maria"
+    </p>
+    <br>
+    <h2>Declaração de Variáveis: var, let e const:</h2>
+    <p>var: Escopo global ou de função. Pode ser redeclarada e tem comportamento de "hoisting" (é movida para o topo no início da execução). <br> <br>
+        let: Escopo de bloco. Não pode ser redeclarada no mesmo escopo. <br> <br>
+        const: Escopo de bloco. Não pode ser redeclarada nem ter seu valor reatribuído.</p>
+    <br>
+    <h2>Operadores(Racionais e Lógicos)</h2>
+    <p>===: Estritamente igual (valor e tipo) <br>
+        !==: Estritamente diferente (valor e tipo) <br> <br>
+        console.log(10 == "10"); // true (só compara valor) <br>
+        console.log(10 === "10"); // false (compara valor e tipo)
+    </p>
+    <br>
+    <p>
+        &&: E / (AND) <br>
+        ||: Ou / (OR) <br> <br>
+
+        let idade = 18;<br>
+        console.log(idade >= 18 && idade < 30); // true <br>
+        console.log(idade >= 17 || idade > 15); // false
+    </p>
+    <br>
+    <h2>Estruturas de Seleção(if, else if, else)</h2>
+    <p>let temperatura = 30; <br>
+        <br>
+        if (temperatura > 35) { <br>
+            --console.log("Muito quente"); <br>
+        } else if (temperatura > 25) { <br>
+          --console.log("Quente"); <br>
+        } else { <br>
+          --console.log("Agradável"); <br>
+        }</p>
+        
+    <p><b>Switch:</b> Usado quando temos várias condições baseadas no valor de uma variável.</p>
+    <p>let diaSemana = 3; <br> <br>
+
+        switch (diaSemana) { <br>
+          --case 1: <br>
+            ----console.log("Segunda-feira"); <br>
+            ----break; <br>
+          --case 2: <br>
+            ----console.log("Terça-feira"); <br>
+            ----break; <br>
+          --case 3: <br>
+            ----console.log("Quarta-feira"); <br>
+            ----break; <br>
+          --default: <br>
+            ----console.log("Dia inválido"); <br>
+        }
+    </p>
+    <h2>Operador Ternário</h2>
+    <p>É uma forma compacta de escrever uma condição if-else.</p>
+    <p>let idade = 18; <br>
+        let mensagem = (idade >= 18) ? "Maior de idade" : "Menor de idade"; <br>
+        console.log(mensagem); // "Maior de idade"
+    </p>
+
+
+</body>
+</html>

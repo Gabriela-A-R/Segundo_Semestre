@@ -1,0 +1,23 @@
+header{
+    background-color: red; 
+}
+
+nav{
+    background-color: gray;
+    text-align: center;
+}
+
+ 
+main{
+    background-color: blue;
+}
+
+footer{
+    background-color: orange;
+    text-align: center;
+    padding: 2px;
+}
+
+main h1{
+    background-color: green;
+}

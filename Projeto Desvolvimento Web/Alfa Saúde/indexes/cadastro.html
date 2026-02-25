@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script src="../javasinho/cadastro.js"></script>
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div id="logo">
+                    <img src="../img/alfa_saude01.png" alt="logo">
+                </div>
+
+                <div id="link">
+                    <a href="quem_somos.html">Quem Somos</a>
+                </div>
+
+                <div id="login">
+                    <a href="login.html" class="login">Login</a>
+                </div>
+
+                <div id="cadastro">
+                    <a href="cadastro.html" class="cadastro">Cadastrar-se</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <h1>Cadastro</h1>
+            <a href="index.html">Página Inicial</a>
+
+            <label for="name">Nome: </label>
+            <input type="text" name="name" id="name"/>
+            
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"/>
+            
+            <label for="password">Senha: </label>
+            <input type="password" name="password" id="password"/>
+            
+            <label for="cpf_cnpj">CPF / CNPJ: </label>
+            <input type="text" name="cpf_cnpj" id="cpf_cnpj" maxlength="14" minlength="11"/>
+            
+            <label for="birthday">Data de nascimento:</label>
+            <input type="date" name="birthday" id="birthday"/>
+            
+            <label for="terms">Termo: </label>
+            <input type="checkbox" name="terms" id="terms"/>
+            
+            <input type="button" value="Enviar" onclick="cadastro()"/>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Alfa Saúde. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
+

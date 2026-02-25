@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Endereço</title>
+    <script src="../javasinho/cadastro_endereco.js" defer></script>
+    <link rel="stylesheet" href="../css/cadastro_endereco.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div id="logo">
+                    <img src="../img/alfa_saude01.png" alt="logo">
+                </div>
+                
+                <div id="home">
+                    <a href="home.html" class="home-button">Voltar</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="cadastro_endereco">
+                <h1>Cadastro de Endereço</h1>
+                <form id="form-endereco">
+
+                    <label for="titulo">Local de Endereço:</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Digite seu local" required>
+
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" required>
+
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" placeholder="Número" required>
+
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento" placeholder="Apto, Bloco, etc.">
+
+                    <button id="endereco-button" type="submit">Cadastrar</button>
+                    
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p> &copy; 2024 Alfa Saúde. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

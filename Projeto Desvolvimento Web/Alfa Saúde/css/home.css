@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/fundo_home.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#container {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #5EDAEB;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#logo img {
+    width: 50px;
+    height: 50px;
+}
+
+#link {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 50%;
+}
+
+#link a, #logout {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: center;
+}
+
+#link a:hover, #logout:hover {
+    transform: scale(1.05);
+    background-color: lightsteelblue;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #5EEB9D;
+    color: black;
+}

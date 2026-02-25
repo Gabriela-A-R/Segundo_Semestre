@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Intensivão / Parte 3</h1>
+
+    <h2>Promises:</h2>
+    <p>Em JavaScript, uma Promise é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona. Uma promise pode ter três estados:</p>
+    <p><b>Pendente (Pending):</b> Quando a operação ainda não foi concluída. <br>
+        <b>Resolvida (Fulfilled):</b> Quando a operação foi concluída com sucesso. <br>
+        <b>Rejeitada (Rejected):</b> Quando ocorreu um erro ou a operação falhou.
+    </p>
+    <p>Para criar uma promise, você usa o construtor Promise, que recebe uma função com dois parâmetros, resolve e reject, usados para definir o resultado da promise:
+    </p>
+    <p>
+        const minhaPromise = new Promise((resolve, reject) => { <br>
+            --let sucesso = true; <br><br>
+            
+            --if (sucesso) { <br>
+              ----resolve("A operação foi bem-sucedida!"); <br>
+            --} else { <br>
+              ----reject("A operação falhou.");<br>
+            --} <br>
+        });
+    </p>
+    <p>
+        No exemplo acima, resolve é chamado se a operação for bem-sucedida, e reject é chamado se houver algum problema.
+    </p>
+    <br>
+
+    <p><b>Encadeamento de Promises com .then(), .catch() e .finally()</b>
+    </p>
+    <p>
+    <b>.then():</b> É chamado quando a promise é resolvida. Pode retornar um valor para a próxima promise no encadeamento. <br>
+    <b>.catch():</b> É usado para capturar erros ou rejeições que ocorrem em qualquer etapa da promise. <br>
+    <b>.finally():</b> Executado sempre ao final, independente do sucesso ou falha.
+    </p>
+    <br>
+
+    <p><b>Exemplo Completo: Simulando uma Operação Assíncrona com setTimeout</b>
+    </p>
+    <p>Vamos simular uma operação assíncrona, como uma requisição a uma API, usando setTimeout.</p>
+    <br>
+    <p>
+        const minhaPromise = new Promise((resolve, reject) => { <br>
+            --setTimeout(() => { <br>
+                ----const sucesso = Math.random() > 0.5; // Define sucesso com 50% de chance <br><br>
+            
+                ----if (sucesso) { <br>
+                    ------resolve("Dados recebidos com sucesso!"); <br>
+                ----} else { <br>
+                    ------reject("Erro ao buscar os dados."); <br>
+                ----} <br>
+            --}, 2000); <br>
+        }); <br><br>
+        
+        minhaPromise <br>
+            --.then((mensagemSucesso) => { <br>
+                ----console.log(mensagemSucesso); <br>
+                ----return "Processando os dados..."; // Passa essa mensagem para o próximo .then() <br>
+            --}) <br>
+            --.then((novaMensagem) => { <br>
+                ----console.log(novaMensagem); <br>
+                ----}) <br>
+            --.catch((mensagemErro) => { <br>
+                ----console.error(mensagemErro); <br>
+                --}) <br>
+            --.finally(() => { <br>
+            ----console.log("Requisição finalizada!"); <br>
+        });
+      </p>
+      <p>Vamos simular uma operação assíncrona, como uma requisição a uma API, usando setTimeout.
+      </p>
+      <p>Esse exemplo simula uma operação de busca de dados que leva 2 segundos para ser concluída. Se for bem-sucedida, executa os .then(). Se falhar, executa o .catch().</p>
+</body>
+</html>

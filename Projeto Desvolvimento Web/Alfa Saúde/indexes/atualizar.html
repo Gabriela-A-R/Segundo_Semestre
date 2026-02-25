@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Endereço - Alfa Saúde</title>
+    <script defer src="../javasinho/atualizar.js"></script>
+    <link rel="stylesheet" href="../css/atualizar.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div id="logo">
+                    <img src="../img/alfa_saude01.png" alt="logo">
+                </div>
+
+                <div id="link">
+                    <a href="lista_endereco.html">Voltar</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="atualizar-container">
+                <h1>Atualizar Endereço</h1>
+                <form id="atualizar-form">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Digite o título do endereço" required>
+
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Digite o endereço" required>
+
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" placeholder="Digite o número" required>
+
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento" placeholder="Digite o complemento" required>
+
+                    <button type="button" onclick="atualizar()">Atualizar</button>
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            &copy; 2024 Alfa Saúde. Todos os direitos reservados.
+        </footer>
+    </div>
+</body>
+</html>

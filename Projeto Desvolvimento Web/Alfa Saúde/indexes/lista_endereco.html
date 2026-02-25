@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Endereços</title>
+    
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet icon" href="../img/favicon.ico" type="image/x-icon">
+    <script src="../javasinho/lista_endereco.js" defer></script>
+    <script src="../javasinho/listagem_veiculo.js" defer></script>
+    <script src="../javasinho/deletar.js"></script>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin: 50px auto;
+            box-shadow: 0px 2px 4px rgb(110, 110, 110);
+            border-radius: 5px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        tr, th {
+            border: 1px solid black;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div id="logo">
+                    <img src="../img/alfa_saude01.png" alt="logo">
+                </div>
+                <div id="link">
+                    <a href="home.html">Voltar</a>
+                </div>
+                
+            </nav>
+        </header>
+        
+        <main>
+            <div id="listagem-container">
+                <h1>Listagem de Endereços:</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>CEP</th>
+                            <th>Endereço</th>
+                            <th>Número</th>
+                            <th>Complemento</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela">
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="listagem-container">
+                <h1>Listagem de Veiculos:</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>CEP</th>
+                            <th>Endereço</th>
+                            <th>Número</th>
+                            <th>Complemento</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela_veiculo">
+                        
+                    </tbody>
+                </table>
+            </div>
+       
+        </main>
+        <footer>
+            &copy; 2024 Alfa Saúde. Todos os direitos reservados.
+        </footer>
+    </div>
+</body>
+</html>

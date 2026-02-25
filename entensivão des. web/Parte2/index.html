@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <style>
+        body{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Intensivão / Parte 2</h1> <br>
+
+    <h2>Laços Definidos</h2>
+    <b>1. for</b> <br>
+    O laço for é usado quando sabemos exatamente quantas vezes queremos repetir um bloco de código. Ele é composto por três partes: inicialização, condição e incremento.</p>
+    <p>for (inicialização; condição; incremento) { <br>
+        // bloco de código a ser executado <br>
+    }
+    <br>
+    <p>exemplo:</p>
+    <p>for (let i = 0; i < 5; i++) { <br>
+        --console.log(i); // Exibe 0, 1, 2, 3, 4 <br>
+        }
+    </p>
+    <br>
+
+    <p><b>2. for in</b></p>
+    <p>O laço for in é utilizado para iterar sobre as chaves de um objeto ou os índices de um array.
+    </p>
+    <p>for (variável in objeto) { <br>
+        // bloco de código a ser executado <br>
+      }
+    </p>
+    <p>exemplo em objeto: <br> <br>
+
+        let pessoa = { nome: "João", idade: 25 }; <br> <br>
+
+        for (let chave in pessoa) { <br>
+        --console.log(chave, pessoa[chave]); // Exibe "nome João" e "idade 25" <br>
+        }
+    </p>
+    <br>
+    <p>exemplo em array:</p>
+    <p>let frutas = ["Maçã", "Banana", "Laranja"]; <br> <br>
+
+        for (let i in frutas) { <br>
+          --console.log(i, frutas[i]); // Exibe 0 "Maçã", 1 "Banana", 2 "Laranja" <br>
+        }
+        </p>
+<br>
+    <p><b>3. for of</b></p>
+    <p>O laço for of é utilizado para iterar sobre os valores de um array ou de outros objetos iteráveis, como Strings, Sets e Mapas.</p>
+    <p>for (variável of iterável) { <br>
+        // bloco de código a ser executado <br>
+      }
+    </p>
+    <p>let frutas = ["Maçã", "Banana", "Laranja"]; <br> <br>
+
+        for (let fruta of frutas) { <br>
+          --console.log(fruta); // Exibe "Maçã", "Banana", "Laranja" <br>
+        }
+        </p>
+        <br>
+    <p><b>4. forEach</b></p>
+    <p>O método forEach é uma função de array que executa uma função para cada elemento do array. Ele não retorna um novo array e não pode ser interrompido.</p>
+    <p>array.forEach(function(elemento, indice) { <br>
+        // bloco de código a ser executado <br>
+      });
+    </p> <br>
+    <p>exemplo array:</p>
+    <p>let frutas = ["Maçã", "Banana", "Laranja"]; <br> <br>
+
+        frutas.forEach(function(fruta, indice) { <br>
+          --console.log(indice, fruta); // Exibe 0 "Maçã", 1 "Banana", 2 "Laranja" <br>
+        });
+        </p> <br>
+    <p>Exemplo com Arrow Function:</p>
+    <p>frutas.forEach((fruta, indice) => { <br>
+        console.log(indice, fruta); // Exibe 0 "Maçã", 1 "Banana", 2 "Laranja" <br>
+      });
+    </p>
+    <br>
+    <p><b>Resumo</b></p>
+    <p><b>for:</b> Para quando sabemos o número de iterações.<br>
+    <b>for in:</b> Para iterar sobre chaves de objetos ou índices de arrays.<br>
+    <b>for of:</b> Para iterar sobre valores de arrays ou objetos iteráveis.<br>
+    <b>forEach:</b> Para aplicar uma função a cada elemento de um array.
+    
+    
+    </p>
+</body>
+</html>
